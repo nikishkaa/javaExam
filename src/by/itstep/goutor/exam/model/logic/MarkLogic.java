@@ -1,9 +1,12 @@
 package by.itstep.goutor.exam.model.logic;
 
 public class MarkLogic {
+    public static final int MIN_MARK = 2;
+    public static final int MAX_MARK = 5;
+
     public static int getNumOfPeriod(int[] marks) {
         for (int mark : marks) {
-            if (mark < 2 || mark > 5) {
+            if (mark < MIN_MARK || mark > MAX_MARK) {
                 return -1;
             }
         }
@@ -13,9 +16,9 @@ public class MarkLogic {
 
 
         for (int i = 0; i < marks.length; i++) {
-            if (marks[i] == 5) {
+            if (marks[i] == MAX_MARK) {
                 currentFiveCount++;
-            } else if (marks[i] == 2 || marks[i] == 3) {
+            } else if (marks[i] == MIN_MARK || marks[i] == 3) {
                 currentFiveCount = 0;
             }
 
