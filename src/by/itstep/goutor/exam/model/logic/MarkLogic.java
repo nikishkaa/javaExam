@@ -11,6 +11,7 @@ public class MarkLogic {
             }
         }
 
+
         int maxFiveCount = 0;
         int currentFiveCount = 0;
 
